@@ -24,6 +24,7 @@ function gotResult(error,result){
     }
     else{
         console.log (result);
+        objects_detect=result;
     }
 }
 
@@ -35,10 +36,10 @@ function draw(){
             document.getElementById("status").innerHTML="Status: Object detected";
             document.getElementById("things").innerHTML="COCOSSD identify " + object_detect.length + " objects";
             percent=floor(object_detect[i].confidence*100);
-            fill("#456r8");
+            fill("#000000");
             text(object_detect[i].label+" "+percent+"%",object_detect[i].x+15,object_detect[i].y+15);
             noFill();
-            stroke("#8u6f99");
+            stroke("#000000");
             rect(object_detect[i].x,object_detect[i].y,object_detect[i].width,object_detect[i].height);
         }
     }
