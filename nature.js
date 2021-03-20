@@ -1,6 +1,6 @@
 cats_dog="";
 status="";
-object_detect
+object_detect=[];
 function preload(){
     cats_dog=loadImage("nature.jpg");
 }
